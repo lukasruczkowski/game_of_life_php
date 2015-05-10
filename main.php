@@ -1,6 +1,6 @@
 <?php
 
-require_once './World.php';
+require_once './classes/World.php';
 
 // parse XML input file
 $xmlInput = file_get_contents('./input.xml', true);

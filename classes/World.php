@@ -1,6 +1,6 @@
 <?php
 
-require_once './Organism.php';
+require_once 'Organism.php';
 
 
 /**
