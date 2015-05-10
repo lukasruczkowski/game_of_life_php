@@ -71,7 +71,19 @@ class World
 		}
 
 		// add all organisms into world
+		$species = array();
 		foreach ($organisms as $organism) {
+			// check count of species
+			if ( ! in_array($organism['species'], $species)) {
+				if (count($species) < $this->species) {
+					$species[] = $organism['species'];
+				} else {
+					// skip organism if the count of species is more than it
+					// was defined
+					continue;
+				}
+			}
+
 			$this->_addOrganism(
 				$organism['x_pos'],
 				$organism['y_pos'],
